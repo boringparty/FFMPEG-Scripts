@@ -75,9 +75,9 @@ This is a straight prep file for Streamable that I use if I don't need to trim d
 #!/bin/bash
 for files in VIDEO/*.mkv; do ffmpeg -i "$files" -c:v copy -c:a aac  "${files%.*} [Streamable].mp4"; done
 ```
-##ZSH Aliases
+## ZSH Aliases
 
-###Quick Cuts
+### Quick Cuts
 
 ```
 function ffcut() {
@@ -85,7 +85,7 @@ function ffcut() {
 }
 ```
 
-###Remove Chapters
+### Remove Chapters
 
 ```
 function ffremchap() {
@@ -93,7 +93,7 @@ for files in *.m4b; do ffmpeg -i "$files" -map_chapters -1 -c copy "${files%.*}"
 }
 ```
 
-###Quick Convert to FLAC and ALAC
+### Quick Convert to FLAC and ALAC
 
 This is typically used when I have some 24/96 FLACs that I need to resample to 16/44 to add to my iPod (modded, running Rockbox) and also my iPhone
 
@@ -110,7 +110,7 @@ for i in *.flac;
 }
 ```
 
-###Make GIFs (soft G)
+### Make GIFs (soft G)
 
 ```
 function  makegif(){
